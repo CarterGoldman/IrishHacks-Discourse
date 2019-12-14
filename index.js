@@ -35,7 +35,7 @@ import * as firebaseui from "firebaseui";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyAC_NdCcqA-vTNLJ5XORYfdq2Gt2595RGM",
+  //apiKey: {key},
   authDomain: "political-chat-9ab10.firebaseapp.com",
   databaseURL: "https://political-chat-9ab10.firebaseio.com",
   projectId: "political-chat-9ab10",
