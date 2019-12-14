@@ -1,0 +1,159 @@
+<body data-gr-c-s-loaded="true">
+
+	<div id="wrapper">
+		<section id="main">
+			<header>
+				<img src="https://i.imgur.com/5UTRzNe.png"></img>
+				<h1 id="welcome">Welcome!</h1>
+
+				<button id = "login">Get Started</button>
+				<button id = "questionnaire-button">Take the Questionnaire</button>
+				<button id = "start-chat">Start Chatting</button>
+			</header>
+			<!-- Popup -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>Our AI model has suggested that the last message you sent might be inflammatory. Maybe you should
+						try to understand where the other person is coming from.</p>
+            <p class="bold">Are you sure you
+						want to submit this message?</p>
+					<button id="yes">Yes</button><button id="no">No</button>
+				</div>
+
+			</div>
+			<div class="sidebar" id="matches-header">
+				People (sorted by least similarity)
+				<ul id="matches-display">
+				</ul>
+			</div>
+
+			<section class="container" id="chat-container">
+
+				<h2 id="chat-with">Chat</h2>
+				<section class="container darker" id="chat-display"></section>
+				<form id="chat-form" autocomplete="off">
+					<input type="text" id="chat-input" placeholder="Type your message here!">
+					<button type="submit">
+            <i class="material-icons">Send</i>
+          </button>
+				</form>
+				<button id="suggestion">Get Chat Suggestion</button>
+
+
+			</section>
+
+			<section class="login" id="firebaseui-auth-container"></section>
+			<section id="questionnaire">
+				<l>Please rank your answers to these questions.</l>
+				<table class="emf-field-grid">
+					<thead>
+						<tr class='emf-banding-head'>
+							<th my_order_property="first"></th>
+							<td width="14%">Completely Disagree</td>
+							<td width="14%">Partially Disagree</td>
+							<td width="14%">Neutral</td>
+							<td width="14%">Partially Agree</td>
+							<td width="14%">Completely Agree</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class='emf-banding-odd'>
+							<th>Abortion should be illegal.</th>
+							<td>
+								<input type="radio" id="element_1_0" name="element_1" value ="-100"/><label for="element_1_0"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_1_1" name="element_1" value ="-50" /><label for="element_1_1"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_1_2" name="element_1" value ="0"/><label for="element_1_2"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_1_3" name="element_1" value ="50"/><label for="element_1_3"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_1_4" name="element_1" value ="100"/><label for="element_1_4"></label>
+							</td>
+						</tr>
+						<tr class='emf-banding-even'>
+							<th>We should have a border wall with Mexico.</th>
+							<td>
+								<input type="radio" id="element_2_0" name="element_2" value ="-100"/><label for="element_2_0"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_2_1" name="element_2" value ="-50"/><label for="element_2_1"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_2_2" name="element_2" value ="0"/><label for="element_2_2"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_2_3" name="element_2" value ="50"/><label for="element_2_3"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_2_4" name="element_2" value ="100"/><label for="element_2_4"></label>
+							</td>
+						</tr>
+						<tr class='emf-banding-odd'>
+							<th>Guns should be more tightly controlled</th>
+							<td>
+								<input type="radio" id="element_3_0" name="element_3" value ="100"/><label for="element_3_0"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_3_1" name="element_3" value ="50"/><label for="element_3_1"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_3_2" name="element_3" value ="0"/><label for="element_3_2"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_3_3" name="element_3" value ="-50"/><label for="element_3_3"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_3_4" name="element_3" value ="-100"/><label for="element_3_4"></label>
+							</td>
+						</tr>
+						<tr class='emf-banding-even'>
+							<th>Medicare should be available to all</th>
+							<td>
+								<input type="radio" id="element_4_0" name="element_4" value ="100"/><label for="element_4_0"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_4_1" name="element_4" value ="50"/><label for="element_4_1"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_4_2" name="element_4" value ="0"/><label for="element_4_2"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_4_3" name="element_4" value ="-50"/><label for="element_4_3"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_4_4" name="element_4" value ="-100"/><label for="element_4_4"></label>
+							</td>
+						</tr>
+						<tr class='emf-banding-odd'>
+							<th>Man-made global warming is a hoax.</th>
+							<td>
+								<input type="radio" id="element_5_0" name="element_5" value ="-100"/><label for="element_5_0"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_5_1" name="element_5" value ="-50"/><label for="element_5_1"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_5_2" name="element_5" value ="0"/><label for="element_5_2"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_5_3" name="element_5" value ="50"/><label for="element_5_3"></label>
+							</td>
+							<td>
+								<input type="radio" id="element_5_4" name="element_5" value ="100"/><label for="element_5_4"></label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button id ="submit">Submit</button>
+				<button id ="cancel-questionnaire">Cancel</button>
+			</section>
+		</section>
+	</div>
+</body>

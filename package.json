@@ -1,0 +1,9 @@
+{
+  "name": "js-sn8gyb",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "7.2.3",
+    "firebaseui": "^4.2.0"
+  }
+}
